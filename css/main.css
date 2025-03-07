@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+#home-title {
+    cursor: pointer;
+}
+
+#menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background: #333;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+/* Car List */
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.car-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Hidden Sections */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: block;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    .car-list {
+        grid-template-columns: 1fr;
+    }
+}
