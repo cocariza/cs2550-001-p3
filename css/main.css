@@ -83,6 +83,32 @@ nav ul a {
   font-size: 1.1rem;
 }
 
+#car-details {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+#car-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#video-container {
+  margin-top: 20px;
+}
+
+#car-video {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  border-radius: 10px;
+}
+
 .favorite-btn {
   background: none;
   border: none;
