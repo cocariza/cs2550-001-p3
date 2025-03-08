@@ -44,8 +44,9 @@ nav ul a {
 
 .car-card {
     display: flex;
-    justify-content: space-between; /* Pushes items apart */
-    align-items: center; /* Aligns items vertically */
+    flex-direction: column; /* Ensures content stacks */
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 400px;
     padding: 10px;
@@ -57,6 +58,22 @@ nav ul a {
     flex: 1; /* Makes caption take up remaining space */
     text-align: left;
     font-size: 1rem;
+}
+
+.car-card img {
+    width: 100%; /* Ensures responsiveness */
+    max-width: 400px; /* Limits image width */
+    height: 250px; /* Forces a consistent height */
+    object-fit: cover; /* Ensures uniform cropping without stretching */
+    border-radius: 5px;
+}
+
+#car-image {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .favorite-btn {
