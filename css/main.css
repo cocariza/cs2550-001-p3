@@ -16,6 +16,11 @@ header {
     align-items: center;
 }
 
+html, body {
+    overflow-y: auto; /* Enables scrolling */
+    height: 100vh; /* Ensures full-page height */
+}
+
 #home-title {
     cursor: pointer;
 }
@@ -61,17 +66,19 @@ nav ul li:hover .submenu {
 
 /* Car List */
 .car-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex; /* Switches from grid to flex */
+    flex-direction: column; /* Makes it a vertical list */
+    align-items: center; /* Centers items */
     gap: 1rem;
     padding: 1rem;
 }
 
-.car-card {
-    background: white;
-    padding: 1rem;
+/* Car Images - Make them Uniform */
+.car-card img {
+    width: 100%; /* Ensures images take full width of container */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Crops images to maintain aspect ratio */
     border-radius: 5px;
-    text-align: center;
 }
 
 .favorite-btn {
