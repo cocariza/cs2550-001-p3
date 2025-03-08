@@ -77,6 +77,56 @@ nav ul li:hover .submenu {
     padding: 1rem;
 }
 
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.sidebar nav ul li {
+    padding: 10px;
+}
+
+.sidebar nav ul a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar nav ul a:hover {
+    background-color: #444;
+}
+
+/* Show sidebar when active */
+.sidebar.active {
+    left: 0;
+}
+
+/* Close Menu Button */
+#close-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 /* Fix Car Images in Both Home & Detail Page */
 .car-card img, #car-image {
     width: 100%; /* Makes images responsive */

@@ -1,18 +1,23 @@
+// Open and Close Sidebar Menu
 document.getElementById("menu-btn").addEventListener("click", function() {
-    document.getElementById("menu").classList.toggle("hidden");
+    document.getElementById("sidebar").classList.add("active");
+});
+
+document.getElementById("close-menu").addEventListener("click", function() {
+    document.getElementById("sidebar").classList.remove("active");
 });
 
 // Car Data
 const carData = {
-    supra: {
-        title: "Toyota Supra",
-        img: "img/supra.jpg",
-        description: "A legendary JDM car with high performance."
-    },
     "911": {
         title: "Porsche 911",
         img: "img/911.jpg",
         description: "An iconic German sports car with heritage."
+    },
+    "tacoma": {
+        title: "Toyota Tacoma",
+        img: "img/tacoma.jpg",
+        description: "The do-it-all truck with off-road capabilities."
     }
 };
 
@@ -22,9 +27,9 @@ document.querySelectorAll(".car-card").forEach(card => {
         const carKey = this.dataset.car;
         document.getElementById("car-title").innerText = carData[carKey].title;
         document.getElementById("car-image").src = carData[carKey].img;
-        document.getElementById("car-image").style.width = "100%"; // Ensures consistency
-        document.getElementById("car-image").style.height = "300px"; // Matches other images
-        document.getElementById("car-image").style.objectFit = "cover"; // Prevents distortion
+        document.getElementById("car-image").style.width = "100%"; 
+        document.getElementById("car-image").style.height = "300px"; 
+        document.getElementById("car-image").style.objectFit = "cover"; 
         document.getElementById("car-description").innerText = carData[carKey].description;
 
         document.getElementById("home").classList.add("hidden");
@@ -38,18 +43,44 @@ document.getElementById("back-btn").addEventListener("click", function() {
     document.getElementById("car-details").classList.add("hidden");
 });
 
-// Favorite Button Functionality
+// Handle Favorites
+const favorites = [];
+
 document.querySelectorAll(".favorite-btn").forEach(button => {
     button.addEventListener("click", function(event) {
-        event.stopPropagation(); // Prevents clicking on card from triggering details
-        this.classList.toggle("favorited");
-        if (this.classList.contains("favorited")) {
-            this.innerText = "★"; // Filled Star
+        event.stopPropagation(); // Prevents opening car details
+
+        const carKey = this.closest(".car-card").dataset.car;
+
+        if (!favorites.includes(carKey)) {
+            favorites.push(carKey);
+            this.innerText = "★"; // Mark as favorite
         } else {
-            this.innerText = "⭐"; // Empty Star
+            favorites.splice(favorites.indexOf(carKey), 1);
+            this.innerText = "⭐"; // Unmark
         }
+
+        updateFavoritesList();
     });
 });
+
+// Update Favorites List
+function updateFavoritesList() {
+    const favoritesSection = document.getElementById("favorites-list");
+    favoritesSection.innerHTML = "";
+
+    favorites.forEach(carKey => {
+        const car = carData[carKey];
+        const carItem = document.createElement("div");
+        carItem.classList.add("favorite-item");
+        carItem.innerHTML = `
+            <img src="${car.img}" alt="${car.title}" width="100">
+            <p>${car.title}</p>
+        `;
+        favoritesSection.appendChild(carItem);
+    });
+}
+
 
 // Navigate Home by Clicking Title
 document.getElementById("home-title").addEventListener("click", function() {
@@ -66,5 +97,8 @@ document.querySelectorAll("nav ul a").forEach(link => {
 
         document.querySelectorAll("main, section").forEach(sec => sec.classList.add("hidden"));
         document.getElementById(section).classList.remove("hidden");
+
+        // Close menu on click
+        document.getElementById("sidebar").classList.remove("active");
     });
 });
