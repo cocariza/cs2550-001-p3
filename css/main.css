@@ -1,101 +1,97 @@
-/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center;
 }
 
-/* Header */
 header {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 nav ul li {
-    display: inline;
+  display: inline;
 }
 
 nav ul a {
-    text-decoration: none;
-    color: white;
-    padding: 0.5rem;
-    display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  display: block;
 }
 
 .car-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .car-card {
-    display: flex;
-    flex-direction: column; /* Ensures content stacks */
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border-radius: 5px;
-    background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  background: white;
 }
 
 .car-card figcaption {
-    flex: 1; /* Makes caption take up remaining space */
-    text-align: left;
-    font-size: 1rem;
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
 }
 
 .car-card img {
-    width: 100%; /* Ensures responsiveness */
-    max-width: 400px; /* Limits image width */
-    height: 250px; /* Forces a consistent height */
-    object-fit: cover; /* Ensures uniform cropping without stretching */
-    border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 #car-image {
-    width: 100%;
-    max-width: 400px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .favorite-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    margin-left: 10px; /* Adds spacing between caption and star */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 10px;
 }
 
-/* Hidden Sections */
 .hidden {
-    display: none;
+  display: none;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .car-list {
-        flex-direction: column;
-    }
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
+  .car-list {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
 }

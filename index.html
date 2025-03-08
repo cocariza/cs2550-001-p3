@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Chris's Car Blog</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
     <script defer src="js/main.js"></script>
-</head>
-<body>
-    <!-- Header -->
+  </head>
+  <body>
     <header>
-        <h1 id="home-title">Chris's Approved Cars 👍</h1>
-        <nav>
-            <ul>
-                <li><a href="#" data-section="home">Home</a></li>
-                <li><a href="#" data-section="about">About</a></li>
-                <li><a href="#" data-section="favorites">Favorites</a></li>
-            </ul>
-        </nav>
+      <h1 id="home-title">Chris's Approved Cars 👍</h1>
+      <nav>
+        <ul>
+          <li><a href="#" data-section="home">Home</a></li>
+          <li><a href="#" data-section="about">About</a></li>
+          <li><a href="#" data-section="favorites">Favorites</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Home Page -->
     <main id="home">
-        <h2>Welcome to My Car Blog!</h2>
-        <div class="car-list">
-            <figure class="car-card" data-car="911">
-                <img src="img/911.jpg" alt="Porsche 911">
-                <figcaption>Porsche 911 - The ultimate sports car.</figcaption>
-                <button class="favorite-btn">⭐</button>
-            </figure>
-            <figure class="car-card" data-car="tacoma">
-                <img src="img/tacoma.jpg" alt="Toyota Tacoma">
-                <figcaption>Toyota Tacoma - The do-it-all truck.</figcaption>
-                <button class="favorite-btn">⭐</button>
-            </figure>
-        </div>
+      <h2>Welcome to My Car Blog!</h2>
+      <div class="car-list">
+        <figure class="car-card" data-car="911">
+          <img src="img/911.jpg" alt="Porsche 911" />
+          <figcaption>Porsche 911 - The ultimate sports car.</figcaption>
+          <button class="favorite-btn">⭐</button>
+        </figure>
+        <figure class="car-card" data-car="tacoma">
+          <img src="img/tacoma.jpg" alt="Toyota Tacoma" />
+          <figcaption>Toyota Tacoma - The do-it-all truck.</figcaption>
+          <button class="favorite-btn">⭐</button>
+        </figure>
+      </div>
     </main>
 
     <!-- Car Info Page -->
     <section id="car-details" class="hidden">
-        <h2 id="car-title"></h2>
-        <img id="car-image" src="" alt="">
-        <p id="car-description"></p>
-        
-        <!-- Embedded Video -->
-        <div id="video-container">
-            <iframe id="car-video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
+      <h2 id="car-title"></h2>
+      <img id="car-image" src="" alt="" />
+      <p id="car-description"></p>
 
-        <button id="back-btn">Back</button>
+      <!-- Embedded Video -->
+      <div id="video-container">
+        <iframe
+          id="car-video"
+          width="560"
+          height="315"
+          src=""
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <button id="back-btn">Back</button>
     </section>
 
     <!-- About Page -->
     <section id="about" class="hidden">
-        <h2>About Me</h2>
-        <p>Welcome to my blog where I share my favorite cars and reviews!</p>
+      <h2>About Me</h2>
+      <p>
+        Welcome to Chris’s Approved Cars, a blog dedicated to my favorite
+        vehicles and why they stand out. I’ve always had a passion for
+        cars—whether it’s high-performance sports cars that push the limits of
+        engineering or rugged off-road trucks built for adventure. This blog is
+        my space to share the cars I love, from track-ready beasts like the
+        Porsche 911 GT3 RS to capable machines like the 2024 Toyota Tacoma. I’ll
+        break down what makes each vehicle special, from design and performance
+        to real-world usability. Beyond just specs, I’m here to explore the
+        driving experience—the way a car makes you feel, the history behind
+        legendary models, and what makes a vehicle truly great. Whether you’re a
+        fellow car enthusiast or just curious about what makes a car Chris
+        Approved, I hope you enjoy the ride! 🚗💨
+      </p>
     </section>
 
     <!-- Favorites Section -->
     <section id="favorites" class="hidden">
-        <h2>Favorite Cars</h2>
-        <div id="favorites-list"></div>
+      <h2>Favorite Cars</h2>
+      <div id="favorites-list"></div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Chris’s Car Blog</p>
+      <p>&copy; 2025 Chris’s Car Blog</p>
     </footer>
-</body>
+  </body>
 </html>
