@@ -74,6 +74,15 @@ nav ul a {
   border-radius: 5px;
 }
 
+#about {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
 .favorite-btn {
   background: none;
   border: none;
