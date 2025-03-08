@@ -11,9 +11,10 @@ header {
     background: #222;
     color: #fff;
     display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+    justify-content: center; /* Centers title */
     align-items: center;
+    position: relative;
+    padding: 1rem;
 }
 
 html, body {
@@ -26,12 +27,15 @@ html, body {
 }
 
 #menu-btn {
+    position: absolute;
+    left: 1rem; /* Moves menu button to the top left */
+    top: 50%;
+    transform: translateY(-50%); /* Centers vertically */
     background: none;
     border: none;
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    display: none;
 }
 
 /* Navigation */
@@ -73,13 +77,15 @@ nav ul li:hover .submenu {
     padding: 1rem;
 }
 
-/* Car Images - Make them Uniform */
-.car-card img {
-    width: 100%; /* Ensures images take full width of container */
-    height: 300px; /* Set a fixed height */
-    object-fit: cover; /* Crops images to maintain aspect ratio */
+/* Fix Car Images in Both Home & Detail Page */
+.car-card img, #car-image {
+    width: 100%; /* Makes images responsive */
+    height: 300px; /* Ensures all images are the same height */
+    object-fit: cover; /* Prevents distortion */
     border-radius: 5px;
+    display: block;
 }
+
 
 .favorite-btn {
     background: none;

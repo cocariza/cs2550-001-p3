@@ -22,6 +22,9 @@ document.querySelectorAll(".car-card").forEach(card => {
         const carKey = this.dataset.car;
         document.getElementById("car-title").innerText = carData[carKey].title;
         document.getElementById("car-image").src = carData[carKey].img;
+        document.getElementById("car-image").style.width = "100%"; // Ensures consistency
+        document.getElementById("car-image").style.height = "300px"; // Matches other images
+        document.getElementById("car-image").style.objectFit = "cover"; // Prevents distortion
         document.getElementById("car-description").innerText = carData[carKey].description;
 
         document.getElementById("home").classList.add("hidden");
