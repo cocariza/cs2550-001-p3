@@ -87,14 +87,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const carData = {
         "911": {
             title: "Porsche 911",
-            img: "img/911.jpg",
-            description: "An iconic German sports car with heritage.",
+            img: "img/911_action.jpg",
+            description: "The Porsche 911 GT3 RS is the ultimate track-focused version of the legendary 911. With a 4.0L naturally aspirated flat-six producing 518 horsepower, it delivers razor-sharp handling, aggressive aerodynamics, and a 9,000 RPM redline for an exhilarating driving experience. Built for the racetrack but street-legal, it's a masterpiece of precision engineering.",
             video: "https://www.youtube.com/embed/7xf35zoQcC4"
         },
         "tacoma": {
             title: "Toyota Tacoma",
-            img: "img/tacoma.jpg",
-            description: "The do-it-all truck with off-road capabilities.",
+            img: "img/tacoma_action.jpg",
+            description: "The Toyota Tacoma is a rugged and versatile midsize truck, designed for both off-road adventures and everyday driving. With a turbocharged i-FORCE engine, modern tech, and an upgraded suspension system, the new Tacoma offers improved towing capacity, comfort, and legendary Toyota reliability, making it the ultimate do-it-all pickup.",
             video: "https://www.youtube.com/embed/2Q3v9kOYew4"
         }
     };
