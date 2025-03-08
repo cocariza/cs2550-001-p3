@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Chris's Car Blog</title>
@@ -7,46 +7,34 @@
     <script defer src="js/main.js"></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1 id="home-title">Chris's Approved Cars 👍</h1>
-        <button id="menu-btn">☰</button>
-    </header>
-
-    <!-- Home Page -->
-    <main id="home">
-        <h2>THIS is My Car Blog!</h2>
-        <div class="car-list">
-            <div class="car-card" data-car="911">
-                <img src="img/911.jpg" alt="Porsche 911">
-                <p>Porsche 911 - The ultimate sports car.</p>
-                <button class="favorite-btn">⭐</button>
-            </div>
-            <div class="car-card" data-car="tacoma">
-                <img src="img/tacoma.jpg" alt="Toyota Tacoma">
-                <p>Toyota Tacoma - The do it all truck.</p>
-                <button class="favorite-btn">⭐</button>
-            </div>
-        </div>
-    </main>
-
-    <!-- Sidebar Navigation Menu -->
-    <div id="sidebar" class="sidebar hidden">
-        <button id="close-menu">✖</button>
         <nav>
             <ul>
                 <li><a href="#" data-section="home">Home</a></li>
                 <li><a href="#" data-section="about">About</a></li>
-                <li>
-                    <a href="#" data-section="categories">Categories</a>
-                    <ul class="submenu">
-                        <li><a href="#" data-section="sports">Sports Cars</a></li>
-                        <li><a href="#" data-section="trucks">Trucks</a></li>
-                    </ul>
-                </li>
                 <li><a href="#" data-section="favorites">Favorites</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
+
+    <!-- Home Page -->
+    <main id="home">
+        <h2>Welcome to My Car Blog</h2>
+        <div class="car-list">
+            <figure class="car-card" data-car="911">
+                <img src="img/911.jpg" alt="Porsche 911">
+                <figcaption>Porsche 911 - The ultimate sports car.</figcaption>
+                <button class="favorite-btn">⭐</button>
+            </figure>
+            <figure class="car-card" data-car="tacoma">
+                <img src="img/tacoma.jpg" alt="Toyota Tacoma">
+                <figcaption>Toyota Tacoma - The do-it-all truck.</figcaption>
+                <button class="favorite-btn">⭐</button>
+            </figure>
+        </div>
+    </main>
 
     <!-- Car Info Page -->
     <section id="car-details" class="hidden">
@@ -59,7 +47,11 @@
     <!-- About Page -->
     <section id="about" class="hidden">
         <h2>About Me</h2>
-        <p>My favorite cars, car reviews, and why I love them.</p>
+        <p>Welcome to my blog where I share my favorite cars and reviews!</p>
+        <video width="600" controls>
+            <source src="video/car-review.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </section>
 
     <!-- Favorites Section -->
@@ -68,7 +60,7 @@
         <div id="favorites-list"></div>
     </section>
 
-
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Chris’s Car Blog</p>
     </footer>

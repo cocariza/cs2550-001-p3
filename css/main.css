@@ -9,44 +9,21 @@ body {
 /* Header */
 header {
     background: #222;
-    color: #fff;
-    display: flex;
-    justify-content: center; /* Centers title */
-    align-items: center;
-    position: relative;
+    color: white;
+    text-align: center;
     padding: 1rem;
 }
 
-html, body {
-    overflow-y: auto; /* Enables scrolling */
-    height: 100vh; /* Ensures full-page height */
-}
-
-#home-title {
-    cursor: pointer;
-}
-
-#menu-btn {
-    position: absolute;
-    left: 1rem; /* Moves menu button to the top left */
-    top: 50%;
-    transform: translateY(-50%); /* Centers vertically */
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Navigation */
 nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
 nav ul li {
-    position: relative;
+    display: inline;
 }
 
 nav ul a {
@@ -56,86 +33,22 @@ nav ul a {
     display: block;
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    background: #333;
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li:hover .submenu {
-    display: block;
-}
-
-/* Car List */
 .car-list {
-    display: flex; /* Switches from grid to flex */
-    flex-direction: column; /* Makes it a vertical list */
-    align-items: center; /* Centers items */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
     padding: 1rem;
 }
 
-/* Sidebar Styling */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Hidden by default */
-    width: 250px;
-    height: 100%;
-    background-color: #222;
-    padding-top: 60px;
-    transition: left 0.3s ease-in-out;
-}
-
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-}
-
-.sidebar nav ul li {
-    padding: 10px;
-}
-
-.sidebar nav ul a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 10px;
-}
-
-.sidebar nav ul a:hover {
-    background-color: #444;
-}
-
-/* Show sidebar when active */
-.sidebar.active {
-    left: 0;
-}
-
-/* Close Menu Button */
-#close-menu {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
 /* Fix Car Images in Both Home & Detail Page */
 .car-card img, #car-image {
-    width: 100%; /* Makes images responsive */
-    height: 300px; /* Ensures all images are the same height */
-    object-fit: cover; /* Prevents distortion */
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
     border-radius: 5px;
-    display: block;
 }
-
 
 .favorite-btn {
     background: none;
@@ -151,14 +64,11 @@ nav ul li:hover .submenu {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    #menu-btn {
-        display: block;
-    }
-    nav ul {
-        display: none;
+    .car-list {
         flex-direction: column;
     }
-    .car-list {
-        grid-template-columns: 1fr;
+    nav ul {
+        flex-direction: column;
+        text-align: center;
     }
 }
