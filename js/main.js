@@ -89,13 +89,13 @@ document.addEventListener("DOMContentLoaded", function() {
             title: "Porsche 911",
             img: "img/911.jpg",
             description: "An iconic German sports car with heritage.",
-            video: "https://www.youtube.com/embed/2Q3v9kOYew4" // Embedded video URL
+            video: "https://www.youtube.com/embed/7xf35zoQcC4"
         },
         "tacoma": {
             title: "Toyota Tacoma",
             img: "img/tacoma.jpg",
             description: "The do-it-all truck with off-road capabilities.",
-            video: "https://www.youtube.com/embed/7xf35zoQcC4" // Embedded video URL
+            video: "https://www.youtube.com/embed/2Q3v9kOYew4"
         }
     };
 
