@@ -1,3 +1,11 @@
+/*
+Project 4: CSS Refactor
+- Improved layout with flexbox
+- Added spacing and consistency
+- Standardized images and videos
+- Made site mobile responsive
+*/
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -29,7 +37,12 @@ nav ul a {
   text-decoration: none;
   color: white;
   padding: 0.5rem;
-  display: block;
+}
+
+#toggle-theme {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .car-list {
